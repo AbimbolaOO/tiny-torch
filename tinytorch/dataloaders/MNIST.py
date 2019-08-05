@@ -2,7 +2,7 @@ import torch
 import torchvision
 from torchvision import datasets, transforms
 
-__add__ = ['dataloader']
+__add__ = ['mnist_dataloader']
 
 
 
@@ -10,7 +10,7 @@ __add__ = ['dataloader']
 transforms = transforms.Compose([transforms.ToTensor(),
                                 transforms.Normalize(mean=[0.5], std=[0.5])])
 
-def dataloader(batch_size=16):
+def mnist_dataloader(batch_size=16):
     r"""
         The function return a tuple of train_dataloader and test_date_loader
 
@@ -18,8 +18,9 @@ def dataloader(batch_size=16):
             batch_size: (optional) The specifies the batch size
 
         Example:
-            train_data = dataloader(batch_size=32)[0]
-            test_data = dataloader(batch_size=32)[1]
+            train_data = mnist_dataloader(batch_size=32)[0]
+            test_data = mnist_dataloader(batch_size=32)[1]
+            train_data, test_data = mnist_dataloader(batch_size=32)
     """
 
     train_data = datasets.MNIST(root='./',transform=transforms, download=True)
