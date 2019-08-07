@@ -4,7 +4,7 @@ import setuptools
 
 setuptools.setup(
     name="tinytorch",
-    version="0.0.1",
+    version="0.0.2",
     author="Abimbola Olayemi",
     author_email="abimbolaolayemiwhyte@gmail.com",
     description="Deep learning library for introducing children to AI",
